@@ -14,6 +14,7 @@ process RUN_ALPHAFOLD2 {
     path (data_dir)
     val   model_preset
     val   use_gpu
+    val   copy_dbs
 
     output:
     path ("${fasta.baseName}*")
@@ -24,6 +25,12 @@ process RUN_ALPHAFOLD2 {
 
     script:
     """
+    if (params.copy_dbs ) { 
+        aws s3 cp ${data_dir} alphafold --recursive
+        ${data_dir} = alphafold
+
+    }
+
     python3 /app/alphafold/run_alphafold.py \
         --fasta_paths=${fasta} \
         --max_template_date=${date} \

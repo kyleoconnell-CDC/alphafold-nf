@@ -83,7 +83,8 @@ workflow ALPHAFOLD {
         params.max_template_date,
         params.data_dir,
         params.alphafold2_model_preset,
-        params.use_gpu
+        params.use_gpu,
+        params.copy_dbs
     )
 
     //
