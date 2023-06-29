@@ -79,12 +79,7 @@ workflow ALPHAFOLD {
 
     RUN_ALPHAFOLD2 (
         INPUT_CHECK.out.fastas,
-        params.max_num_preds,
-        params.max_template_date,
-        params.data_dir,
-        params.alphafold2_model_preset,
-        params.use_gpu,
-        params.copy_dbs
+        params.data_dir
     )
 
     //
