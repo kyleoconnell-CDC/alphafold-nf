@@ -2,7 +2,7 @@ name: Feature request
 description: Suggest an idea for the nf-core/alphafold pipeline
 assignees: kyleoconnell-CDC
 labels: enhancement,bug
-projects: CDC_repos
+projects: 'CDC_repos'
 body:
   - type: textarea
     id: description
