@@ -1,7 +1,7 @@
 name: Feature request
 description: Suggest an idea for the nf-core/alphafold pipeline
 labels: enhancement
-project: CDC repos
+projects: CDC repos
 body:
   - type: textarea
     id: description
